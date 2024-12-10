@@ -1,0 +1,92 @@
+.mec-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0px 80px var(--cor-0), inset 0px -80px var(--cor-0);
+}
+
+.mec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mec-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mec-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.mec-conteudo > span {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mec-conteudo h2 {
+  margin-bottom: 32px;
+}
+
+.mec-conteudo > p {
+  margin-bottom: 20px;
+}
+
+.mec-conteudo a {
+  margin-bottom: 80px;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: currentColor;
+  position: relative;
+  margin-top: 4px;
+}
+
+.mec-vantagens {
+  display: flex;
+  gap: 40px;
+}
+
+.mec-vantagens h3 {
+  margin-bottom: 8px;
+  width: max-content;
+}
+
+.mec-vantagens img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .mec-bg {
+    box-shadow: initial;
+  }
+  .mec {
+    grid-template-columns: 1fr;
+  }
+
+  .mec-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .mec-conteudo a {
+    padding-bottom: 60px;
+  }
+
+  .mec-img {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .mec-vantagens {
+    flex-direction: column;
+  }
+}

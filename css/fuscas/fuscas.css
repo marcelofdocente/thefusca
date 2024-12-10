@@ -1,0 +1,108 @@
+.fuscas-bg:nth-child(odd) {
+  background-image: linear-gradient(
+    to right,
+    var(--cor-0) 30%,
+    var(--cor-11) 0%
+  );
+}
+
+.fuscas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 40px;
+  align-items: center;
+  background: url(../../img/dec/top-right.svg) no-repeat top 40px right 20px;
+}
+
+.fuscas-img {
+  position: relative;
+  object-fit: cover;
+}
+
+.fuscas-img span {
+  background: var(--cor-12);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.fuscas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+
+.fuscas-conteudo h2,
+.fuscas-conteudo p {
+  grid-column: 1/-1;
+}
+
+.fuscas-conteudo h2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.fuscas-conteudo h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  margin-bottom: 4px;
+  background-color: var(--cor-p1);
+}
+
+.fuscas p {
+  margin-bottom: 32px;
+}
+
+.fuscas ul {
+  display: grid;
+  gap: 16px;
+}
+
+.fuscas li {
+  display: flex;
+  align-items: center;
+}
+
+.fuscas-conteudo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.fuscas-conteudo a {
+  place-self: end;
+}
+
+@media (max-width: 800px) {
+  .fuscas-bg:nth-child(odd) {
+    background: var(--cor-11);
+  }
+
+  .fuscas {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+  }
+
+  .fuscas ul {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+
+  .fuscas-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .fuscas-conteudo a {
+    place-self: start;
+  }
+}
